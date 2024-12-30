@@ -1,0 +1,8 @@
+   # Ignore environment file
+   .env
+
+   # Ignore instructions folder
+   instructions/
+
+   # Ignore database configuration file
+   database_config.json
