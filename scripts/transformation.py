@@ -16,7 +16,8 @@ def transform_data(raw_data, spark):
         StructField("Low", FloatType(), True),
         StructField("Close", FloatType(), True),
         StructField("Adj Close", FloatType(), True),
-        StructField("Volume", LongType(), True)  # Changed to LongType
+        StructField("Volume", LongType(), True),
+        StructField("Stock_Name", StringType(), True)  # Added Stock_Name field
     ])
 
     transformed_data = []
@@ -38,6 +39,9 @@ def transform_data(raw_data, spark):
 
             # Convert the 'Date' column to a date format (without time)
             data['Date'] = data['Date'].dt.date  # Convert to date
+
+            # Add the ticker as a new column
+            data['Stock_Name'] = ticker  # Add stock name
 
             # Convert Pandas DataFrame to Spark DataFrame
             spark_df = spark.createDataFrame(data, schema=schema)

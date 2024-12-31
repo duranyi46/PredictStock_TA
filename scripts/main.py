@@ -15,7 +15,7 @@ def main():
         .getOrCreate()
 
     # Define the stock index and additional tickers
-    index_list = ['AAPL', 'NVDA', 'MSFT', 'AMZN', 'META', 'ADBE', 'TSLA', 'FFIE', 'ASTI', 'ALLR']
+    index_list = ['AAPL', 'NVDA', 'MSFT', 'AVGO', 'META', 'AMZN', 'TSLA', '^GSPC', 'NQ=F']
 
     # Step 1: Extract data
     print("Extracting data...")
