@@ -10,11 +10,11 @@ def transform_data(raw_data, spark):
     # Define schema for the DataFrame
     schema = StructType([
         StructField("Date", DateType(), True),
-        StructField("Open", FloatType(), True),
+        StructField("Adj Close", FloatType(), True),
+        StructField("Close", FloatType(), True),
         StructField("High", FloatType(), True),
         StructField("Low", FloatType(), True),
-        StructField("Close", FloatType(), True),
-        StructField("Adj Close", FloatType(), True),
+        StructField("Open", FloatType(), True),
         StructField("Volume", LongType(), True),
         StructField("Stock_Name", StringType(), True)  # Added Stock_Name field
     ])

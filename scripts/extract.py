@@ -19,7 +19,7 @@ def extract_data(index_list):
     for ticker in index_list:
         try:
             print(f"Fetching data for {ticker}...")
-            stock_data = yf.download(ticker, start="2020-01-01", end="2023-01-01")
+            stock_data = yf.download(ticker, start="2010-01-01", end="2024-01-01")
             if not stock_data.empty:
                 list_finance[ticker] = stock_data
                 print(f"Data for {ticker} fetched successfully.")

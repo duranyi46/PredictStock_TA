@@ -37,7 +37,7 @@ def load_data(data, table_name, db_config):
 
         # Prepare the insert query
         query = f"""
-        INSERT INTO {table_name} (date, open, high, low, close, adj_close, volume, stock_name)
+        INSERT INTO {table_name} (date, adj_close, close, high, low, open, volume, stock_name)
         VALUES %s
         ON CONFLICT DO NOTHING;
         """
@@ -46,11 +46,11 @@ def load_data(data, table_name, db_config):
         values = [
             (
                 row[0],  # Date
-                row[1],  # Open
-                row[2],  # High
-                row[3],  # Low
-                row[4],  # Close
-                row[5],  # Adj Close
+                row[1],  # adj_close
+                row[2],  # close
+                row[3],  # high
+                row[4],  # low
+                row[5],  # open 
                 row[6],  # Volume
                 row[7]   # Stock_Name
             )
