@@ -1,7 +1,6 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StructField, StringType, FloatType, DateType, LongType
-
-from pyspark.sql.functions import to_date
+import pandas as pd
 
 def transform_data(raw_data, spark):
     """
@@ -37,8 +36,18 @@ def transform_data(raw_data, spark):
                 print(f"Error: 'Date' column not found for {ticker}.")
                 continue
 
-            # Convert the 'Date' column to a date format (without time)
-            data['Date'] = data['Date'].dt.date  # Convert to date
+            # Check for null values in the 'Date' column
+            if data['Date'].isnull().any():
+                print(f"Warning: Null values found in 'Date' column for {ticker}.")
+                data = data.dropna(subset=['Date'])
+
+            # Convert the 'Date' column to datetime and then to date
+            data['Date'] = pd.to_datetime(data['Date'], errors='coerce').dt.date  # Convert to date
+
+            # Check for invalid dates after conversion
+            if data['Date'].isnull().any():
+                print(f"Warning: Invalid date values found for {ticker} after conversion.")
+                data = data.dropna(subset=['Date'])
 
             # Add the ticker as a new column
             data['Stock_Name'] = ticker  # Add stock name
