@@ -1,5 +1,5 @@
 "# TermAssignment_StockPrediction" 
-"# StockPrediction_TA" 
-"# StockPrediction_TA" 
-"# StockPrediction_TA" 
+"# Add .env file in your cloned directory for your db credentials" 
+"# cd to your directiory" 
+"# python scripts/main.py" 
 "# PredictStock_TA" 
