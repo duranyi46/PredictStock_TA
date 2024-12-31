@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d805887d-d290-4984-a9fc-3f501720906a" name="Changes" comment="" />
+    <list default="true" id="d805887d-d290-4984-a9fc-3f501720906a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PredictStock_TA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PredictStock_TA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +47,9 @@
     &quot;accountId&quot;: &quot;54e37b37-d404-4c40-879c-24cb6d0b4f48&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -55,7 +62,7 @@
   &quot;keyToString&quot;: {
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;cagri-br&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/cagrigoksel/PycharmProjects/PredictStock_TA/notebooks&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -118,7 +125,8 @@
       <updated>1735649898728</updated>
       <workItem from="1735649899804" duration="1245000" />
       <workItem from="1735654535580" duration="2494000" />
-      <workItem from="1735669268613" duration="71000" />
+      <workItem from="1735669268613" duration="438000" />
+      <workItem from="1735669727850" duration="339000" />
     </task>
     <servers />
   </component>
